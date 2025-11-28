@@ -1,6 +1,6 @@
   import React from 'react'
   import { createBrowserRouter, RouterProvider } from 'react-router'
-  import AuthLayout from '../layout/authLayout'
+  import AuthLayout from '../layout/AuthLayout'
   import Home from '../pages/Home'
   import { useSelector } from 'react-redux'
   import Profile from '../pages/Profile'
