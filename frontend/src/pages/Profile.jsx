@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { UpdateProfileInfo } from "../actions/AuthAction";
 import { useNavigate } from "react-router";
 import { addUser } from "../reducers/authSlice";
-import Navbar from "../components/Navbar"; 
+import Navbar from '../components/navbar.jsx';
 
 const Profile = () => {
   const token = localStorage.getItem("token");
