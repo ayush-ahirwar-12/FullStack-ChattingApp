@@ -15,7 +15,6 @@ import { fileURLToPath } from "url";
 import MongoStore from "connect-mongo";
 import { app, io, server } from "./src/config/socket.js";
 import userModel from "./src/models/user.model.js";
-import mongoose from "mongoose";
 
 // fix __dirname manually
 const __filename = fileURLToPath(import.meta.url);
@@ -37,7 +36,9 @@ await connectdb();
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
-    store: MongoStore.create({ client: mongoose.connection.getClient() }),
+    store: MongoStore.create({
+      mongoUrl: process.env.MONGOOSE_URI
+    }),
     resave: false,
     saveUninitialized: false,
     cookie: {
