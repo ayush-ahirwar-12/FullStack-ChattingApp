@@ -11,8 +11,9 @@ const session = require("express-session");
 const userModel = require("./src/models/user.model");
 var googleStrategy = require("passport-google-oauth20").Strategy;
 const path = require("path");
-const __dirname = path.resolve();
-
+// const __dirname = path.resolve();
+const __filename = path.basename(__filename); // or proper CommonJS
+const __dirname = path.dirname(__filename);
 
 
 
