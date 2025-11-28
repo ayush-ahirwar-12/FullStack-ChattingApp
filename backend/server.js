@@ -13,7 +13,7 @@ import GoogleStrategy from "passport-google-oauth20";
 import path from "path";
 import { fileURLToPath } from "url";
 import MongoStore from "connect-mongo";
-import { app as socketApp, io, server } from "./src/config/socket.js";
+import { app , io, server } from "./src/config/socket.js";
 import userModel from "./src/models/user.model.js";
 
 // fix __dirname manually
