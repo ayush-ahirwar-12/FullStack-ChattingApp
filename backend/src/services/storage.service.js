@@ -1,4 +1,4 @@
-const Imagekit = require("imagekit")
+import Imagekit from "imagekit"
 
 const imagekit = new Imagekit({
     publicKey:process.env.IMAGEKIT_PUBLIC_KEY,
@@ -22,4 +22,4 @@ try {
 
 }
 
-module.exports=sendFiles;
+export default sendFiles;

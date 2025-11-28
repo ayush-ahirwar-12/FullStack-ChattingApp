@@ -1,8 +1,8 @@
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const userModel = require("../models/user.model");
-const sendFiles = require("../services/storage.service");
-const cacheClient = require("../services/cache.service");
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import userModel from "../models/user.model.js";
+import sendFiles from "../services/storage.service.js";
+import cacheClient from "../services/cache.service.js";
 
 const UserRegisterController = async (req, res) => {
   try {
@@ -155,7 +155,7 @@ const UpdateProfileController = async (req, res) => {
     })
   }
 };
-module.exports = {
+export default {
   UserRegisterController,
   UserLoginController,
   UserLogoutController,

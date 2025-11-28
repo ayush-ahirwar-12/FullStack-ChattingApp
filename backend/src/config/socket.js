@@ -1,9 +1,10 @@
 // backend socket server (e.g. server.js)
-const { Server } = require("socket.io");
-const http = require("http");
-const express = require("express");
+import { Server } from "socket.io";
+import http from "http";
+import express from "express";
+import messageModel from "../models/message.model.js";
+
 const app = express();
-const messageModel = require("../models/message.model");
 
 const server = http.createServer(app);
 const io = new Server(server, {
@@ -80,4 +81,4 @@ io.on("connection", (socket) => {
   });
 });
 
-module.exports = { io, app, server };
+export default { io, app, server };

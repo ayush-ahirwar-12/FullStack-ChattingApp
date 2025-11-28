@@ -1,6 +1,6 @@
-const jwt = require("jsonwebtoken");
-const userModel = require("../models/user.model");
-const cacheClient = require("../services/cache.service");
+import jwt from "jsonwebtoken";
+import userModel from "../models/user.model.js";
+import cacheClient from "../services/cache.service.js";
 
 const authMiddleware = async (req, res, next) => {
   const authHeader = req.headers["authorization"];
@@ -29,4 +29,4 @@ const authMiddleware = async (req, res, next) => {
   }
 };
 
-module.exports = authMiddleware;
+export default authMiddleware;

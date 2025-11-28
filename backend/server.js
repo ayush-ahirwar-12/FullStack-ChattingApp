@@ -1,18 +1,22 @@
-require("dotenv").config();
-const express = require("express")
-const connectdb = require("./src/db/db")
-const authRouter = require("./src/routes/auth.route")
-const cookie = require("cookie-parser")
-const cors = require("cors")
-const messageRouter = require("./src/routes/message.route")
-const {app,io,server} =require("./src/config/socket")
-const passport = require("passport");
-const session = require("express-session");
-const userModel = require("./src/models/user.model");
-var googleStrategy = require("passport-google-oauth20").Strategy;
-const path = require("path");
-// const __dirname = path.resolve();
-const __filename = path.basename(__filename); // or proper CommonJS
+import dotenv from "dotenv";
+dotenv.config();
+
+import express from "express";
+import connectdb from "./src/db/db.js";
+import authRouter from "./src/routes/auth.route.js";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+import messageRouter from "./src/routes/message.route.js";
+import { app, io, server } from "./src/config/socket.js";
+import passport from "passport";
+import session from "express-session";
+import userModel from "./src/models/user.model.js";
+import GoogleStrategy from "passport-google-oauth20";
+import path from "path";
+import { fileURLToPath } from "url";
+
+// fix __dirname manually in ESM
+const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 

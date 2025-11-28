@@ -1,6 +1,6 @@
-const messageModel = require("../models/message.model");
-const userModel = require("../models/user.model");
-const sendFiles = require("../services/storage.service");
+import messageModel from "../models/message.model.js";
+import userModel from "../models/user.model.js";
+import sendFiles from "../services/storage.service.js";
 
 const getUserForSideBar = async (req, res) => {
   try {
@@ -79,4 +79,4 @@ const uploadImage=async(req,res)=>{
     res.status(500).json({ success: false, message: "Upload failed" });
   }
 }
-module.exports = { getUserForSideBar, getMessage, sendMessage,uploadImage };
+export default { getUserForSideBar, getMessage, sendMessage,uploadImage };

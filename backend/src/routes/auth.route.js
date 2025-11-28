@@ -1,10 +1,11 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const AuthController = require("../controllers/auth.controller");
-const authMiddleware = require("../middlewares/auth.middleware");
-const upload = require("../config/multer");
-const passport = require("passport");
-const jwt = require("jsonwebtoken")
+
+import AuthController from "../controllers/auth.controller.js";
+import authMiddleware from "../middlewares/auth.middleware.js";
+import upload from "../config/multer.js";
+import passport from "passport";
+import jwt from "jsonwebtoken";
 
 router.get("/me", authMiddleware, (req, res) => {
   return res.status(200).json({
@@ -57,4 +58,4 @@ router.get("/profile",authMiddleware,(req,res)=>{
 
 
 
-module.exports=router
+export default router;
