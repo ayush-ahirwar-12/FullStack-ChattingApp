@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/navbar.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import SideUser from '../components/SideUser';
 import { Outlet } from 'react-router';
