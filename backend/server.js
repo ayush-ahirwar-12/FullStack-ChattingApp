@@ -102,11 +102,14 @@ app.use("/api/message", messageRouter);
 
 // Serve frontend in production
 if (process.env.NODE_ENV === "production") {
+  // Serve frontend static files
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
-  app.get("*", (req, res) => {
+
+  // Correct wildcard route for Express v5
+  app.get("/*", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
-  });
-}
+  })};
+
 
 // Start server
 server.listen(process.env.PORT || 5000, () => {
