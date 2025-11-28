@@ -1,7 +1,7 @@
 import axios from "axios";
 import { axiosInstance } from "../axios/axios";
-import { addUser, removeUser, setOnlineUsers, setSelectedUser } from "../reducers/AuthSlice";
-import { persistor } from "../store/Store";
+import { addUser, removeUser, setOnlineUsers, setSelectedUser } from "../reducers/authSlice";
+import { persistor } from "../store/store";
 import { clearLogoutTimer, setLogoutTimer } from "../utils/AuthTimer";
 import { setMessage } from "../reducers/UserchatSlice";
 import { jwtDecode } from "jwt-decode";
