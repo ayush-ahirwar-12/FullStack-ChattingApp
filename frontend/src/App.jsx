@@ -3,7 +3,7 @@ import AppRouter from "./router/AppRouter";
 import { useDispatch, useSelector } from "react-redux";
 import { axiosInstance } from "./axios/axios";
 import { logout } from "./actions/AuthAction";
-import { addUser, clearAuth, setOnlineUsers } from "./reducers/authSlice";
+import { addUser, clearAuth, setOnlineUsers } from "./reducers/AuthSlice";
 import { setLogoutTimer } from "./utils/AuthTimer";
 import { io } from "socket.io-client";
 import { jwtDecode } from "jwt-decode";

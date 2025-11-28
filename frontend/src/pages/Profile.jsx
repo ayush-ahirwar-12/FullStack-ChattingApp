@@ -5,8 +5,8 @@ import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 import { UpdateProfileInfo } from "../actions/AuthAction";
 import { useNavigate } from "react-router";
-import { addUser } from "../reducers/authSlice";
-import Navbar from "../components/navbar"; 
+import { addUser } from "../reducers/AuthSlice";
+import Navbar from "../components/Navbar"; 
 
 const Profile = () => {
   const token = localStorage.getItem("token");

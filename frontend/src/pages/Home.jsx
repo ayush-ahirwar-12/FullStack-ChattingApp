@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from '../components/navbar';
+import Navbar from '../components/Navbar';
 import { useDispatch, useSelector } from 'react-redux';
-import SideUser from '../components/sideUser';
+import SideUser from '../components/SideUser';
 import { Outlet } from 'react-router';
-import { getuserforbar } from '../actions/userAction';
+import { getuserforbar } from '../actions/UserAction';
 import NoChatSelected from '../components/NoChatSelected';
 
 const Home = () => {

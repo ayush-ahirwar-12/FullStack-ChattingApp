@@ -5,7 +5,7 @@ import { UserLoginApi } from "../../actions/AuthAction";
 import { MessageCircle, Mail, Lock, Eye, EyeOff, Send } from "lucide-react";
 import { toast } from "react-toastify";
 import { axiosInstance } from "../../axios/axios";
-import { addUser, clearAuth } from "../../reducers/authSlice";
+import { addUser, clearAuth } from "../../reducers/AuthSlice";
 
 const Login = ({ settoggle }) => {
   const dispatch = useDispatch();

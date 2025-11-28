@@ -1,5 +1,5 @@
 import { toast } from "react-toastify";
-import { removeUser } from "../reducers/authSlice";
+import { removeUser } from "../reducers/AuthSlice";
 
 let logoutTimer = null;
 export const setLogoutTimer = (dispatch, expinSeconds) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
-import { setSelectedUser } from ".././reducers/authSlice";
+import { setSelectedUser } from "../reducers/AuthSlice";
 
 const SideUser = ({ elem }) => {
   const navigate = useNavigate();

@@ -1,5 +1,5 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import authSlice from "../reducers/authSlice";
+import authSlice from "../reducers/AuthSlice";
 import UserChatSlice from "../reducers/UserchatSlice";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage
 import { persistReducer, persistStore } from "redux-persist";

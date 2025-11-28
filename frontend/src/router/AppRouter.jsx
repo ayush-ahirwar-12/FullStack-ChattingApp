@@ -2,7 +2,6 @@
   import { createBrowserRouter, RouterProvider } from 'react-router'
   import AuthLayout from '../layout/AuthLayout'
   import Home from '../pages/Home'
-  import { useSelector } from 'react-redux'
   import Profile from '../pages/Profile'
   import UserChat from '../components/ChatContainer'
   import Login from '../components/authComponent/Login'
