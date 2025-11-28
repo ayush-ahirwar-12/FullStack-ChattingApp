@@ -155,7 +155,7 @@ const UpdateProfileController = async (req, res) => {
     })
   }
 };
-export default {
+export {
   UserRegisterController,
   UserLoginController,
   UserLogoutController,
