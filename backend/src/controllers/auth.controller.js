@@ -78,7 +78,7 @@ const UserLogoutController = async (req, res) => {
       });
     }
     await cacheClient.set(token,"blacklisted")
-    res.clearCookie("token",{
+    res.clearCookie("token",{ 
       httpOnly:true,
       secure:false,
       sameSite:"lax"
