@@ -1,8 +1,10 @@
 import axios from "axios";
 
-export const axiosInstance = axios.create({
-    baseURL:"https://fullstack-chattingapp-backend.onrender.com",
-    withCredentials:true
-})
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://fullstack-chattingapp-backend.onrender.com";
 
-axiosInstance.defaults.withCredentials=true;
+export const axiosInstance = axios.create({
+  baseURL: API_URL,
+  withCredentials: true,
+});
