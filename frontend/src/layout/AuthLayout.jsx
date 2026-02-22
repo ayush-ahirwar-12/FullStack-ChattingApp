@@ -9,6 +9,7 @@ const AuthLayout = () => {
   const navigate = useNavigate();
     const [toggle, settoggle] = useState(true)
     const {user,isLoggedIn} = useSelector((state)=>state.auth)
+    
 
     useEffect(()=>{
       if(isLoggedIn&&user){
