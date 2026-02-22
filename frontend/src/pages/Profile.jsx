@@ -25,7 +25,7 @@ const Profile = () => {
     const formdata = new FormData();
     formdata.append("image", file);
     try {
-      const res = await fetch("http://localhost:5000/api/auth/profilepic", {
+      const res = await fetch("https://fullstack-chattingapp-backend.onrender.com/api/auth/profilepic", {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,
