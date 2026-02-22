@@ -31,7 +31,7 @@ app.use(
   })
 );
 await connectdb();
-
+app.set("trust proxy", 1); // VERY IMPORTANT (Render pe required)
 // Session with MongoStore
 app.use(
   session({
