@@ -60,7 +60,7 @@ const Login = ({ settoggle }) => {
 
 
   const GoogleAuthHandler=async()=>{
-    window.location.href="http://localhost:5000/api/auth/google"
+    window.location.href="https://fullstack-chattingapp-backend.onrender.com/api/auth/google"
           
 
   }

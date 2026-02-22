@@ -13,7 +13,7 @@ const App = () => {
   const dispatch = useDispatch();
   const {user} = useSelector((state)=>state.auth)
   const socket = useMemo(
-    () => io("http://localhost:5000", { autoConnect: true }),
+    () => io("https://fullstack-chattingapp-backend.onrender.com", { autoConnect: true }),
     []
   );
   // useEffect(() => {

@@ -23,7 +23,7 @@ const ChatInput = () => {
   const [ImageUrl, setImageUrl] = useState(null);
 
   const socket = useMemo(
-    () => io("http://localhost:5000", { autoConnect: true }),
+    () => io("https://fullstack-chattingapp-backend.onrender.com", { autoConnect: true }),
     []
   );
   const handleImageChange = async(e) => {
