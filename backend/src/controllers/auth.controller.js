@@ -25,7 +25,11 @@ const UserRegisterController = async (req, res) => {
       password: hashedPassword,
     });
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
-    res.cookie("token", token);
+    res.cookie("token", token,{
+            httpOnly:true,
+      secure:true,
+      sameSite:"none"
+    });
 
     res.status(201).json({
       message: "user created successfully",
@@ -54,7 +58,11 @@ const UserLoginController = async (req, res) => {
       res.status(400).json({ message: "invalid credentials" });
     }
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET,{expiresIn:"12h"});
-    res.cookie("token", token);
+    res.cookie("token", token,{
+      httpOnly:true,
+      secure:true,
+      sameSite:"none"
+    });
 
     return res.status(200).json({
       message: "user login successfully",
