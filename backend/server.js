@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://fullstack-chattingapp-frontend.onrender.com",
     credentials: true,
   })
 );
@@ -63,7 +63,7 @@ passport.use(
       callbackURL:
         process.env.NODE_ENV === "production"
           ? "https://yourproductiondomain.com/api/auth/google/callback"
-          : "http://localhost:5000/api/auth/google/callback",
+          : "https://fullstack-chattingapp-backend.onrender.com/api/auth/google/callback",
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
